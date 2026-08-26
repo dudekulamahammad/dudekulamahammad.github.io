@@ -1,0 +1,411 @@
+
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,600,700');
+
+/* ---------- Global Reset ---------- */
+* {
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background: #f5f7fb;
+    color: #30343b;
+    font-family: "Quicksand", sans-serif;
+    font-size: 17px;
+    line-height: 1.7;
+}
+/* ---------- Main Tables / Page Containers ---------- */
+body > table {
+    width: min(1100px, 94%) !important;
+    margin: 0 auto 24px auto !important;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+/* First table = header / navigation / about / policy */
+body > table:first-of-type {
+    margin-top: 25px !important;
+}
+/* ---------- Headings ---------- */
+
+h1 {
+    margin: 10px 0 4px;
+    color: #172554;
+    font-size: clamp(27px, 4vw, 40px);
+    font-weight: 700;
+    line-height: 1.25;
+}
+h3 {
+    margin: 5px 0;
+    color: #475569;
+    font-size: clamp(16px, 2vw, 21px);
+    font-weight: 500;
+}
+/* ---------- Section Titles ---------- */
+b[id] {
+    display: inline-block;
+    color: #172554;
+    font-size: 21px;
+    font-weight: 700;
+}
+/* Make section headings more visually distinct */
+#about,
+#lecture,
+#cpolicy,
+#schedule,
+#lab,
+#activity,
+#staff {
+    scroll-margin-top: 90px;
+}
+
+/* ---------- Header ---------- */
+
+body > table:first-of-type tr:first-child td {
+    padding: 30px 20px 22px;
+    background: linear-gradient(135deg, #eef2ff, #ffffff);
+    border-radius: 18px 18px 0 0;
+    border: 1px solid #e2e8f0;
+}
+
+/* ---------- Navigation ---------- */
+
+body > table:first-of-type tr:nth-child(2) td {
+    padding: 0;
+    background: #172554;
+    border-radius: 0 0 14px 14px;
+    overflow: hidden;
+    text-align: center;
+    white-space: normal;
+}
+
+/*
+   Existing HTML has:| About | Lecture/Lab/Office Hours |
+   CSS makes these existing links behave like navigation buttons.
+*/
+body > table:first-of-type tr:nth-child(2) a {
+    display: inline-block;
+    padding: 13px 12px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+body > table:first-of-type tr:nth-child(2) a:hover {
+    color: #ffffff;
+    background: #2563eb;
+}
+body > table:first-of-type tr:nth-child(2) a:active {
+    background: #1d4ed8;
+}
+/* Hide the unnecessary horizontal rule in navigation */
+body > table:first-of-type tr:nth-child(2) hr {
+    display: none;
+}
+/* ---------- Content Cards ---------- */
+body > table:first-of-type tr:nth-child(n+3) td {
+    padding: 28px 30px;
+    background: #ffffff;
+    border-left: 1px solid #e2e8f0;
+    border-right: 1px solid #e2e8f0;
+}
+/* About section */
+body > table:first-of-type tr:nth-child(3) td {
+    padding-top: 30px;
+}
+/* Last section of first table */
+body > table:first-of-type tr:last-child td {
+    border-radius: 0 0 16px 16px;
+}
+/* ---------- Paragraphs ---------- */
+
+p {
+    margin-top: 0;
+    margin-bottom: 18px;
+}
+/* ---------- Lists ---------- */
+ul {
+    padding-left: 25px;
+}
+li {
+    margin-bottom: 12px;
+}
+#cpolicy ~ ul li {
+    margin-bottom: 15px;
+}
+li b {
+    color: #1e3a8a;
+}
+/* ---------- Links ---------- */
+a {
+    color: #2563eb;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease, background 0.2s ease;
+}
+a:hover {
+    color: #1d4ed8;
+    text-decoration: underline;
+}
+/* ---------- Tables ---------- */
+table {
+    font-family: "Quicksand", sans-serif;
+}
+/* Schedule, Lab and Exam tables */
+body > table:not(:first-of-type) {
+    width: min(1100px, 94%) !important;
+    background: #ffffff;
+    border: 1px solid #dbe2ea;
+    border-collapse: collapse;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(15, 23, 42, 0.06);
+}
+/* Table heading row */
+body > table:not(:first-of-type) tr:first-child td {
+    padding: 18px 20px;
+    background: #172554;
+    color: #ffffff;
+    border: none;
+}
+body > table:not(:first-of-type) tr:first-child b {
+    color: #ffffff;
+}
+/* Actual column header */
+body > table:not(:first-of-type) tr:nth-child(2) th {
+    padding: 13px 10px;
+    background: #e8eefc;
+    color: #172554;
+    border: 1px solid #d4ddec;
+    font-weight: 700;
+}
+/* Table cells */
+body > table:not(:first-of-type) td {
+    padding: 12px 10px;
+    border: 1px solid #e2e8f0;
+    vertical-align: middle;
+}
+/* Alternating rows */
+body > table:not(:first-of-type) tbody tr:nth-child(even) {
+    background: #f8fafc;
+}
+/* Hover rows */
+body > table:not(:first-of-type) tbody tr:hover {
+    background: #eef4ff;
+}
+/* ---------- Material Links ---------- */
+body > table:not(:first-of-type) td a {
+    display: inline-block;
+    margin: 2px 3px;
+    padding: 3px 8px;
+    color: #2563eb;
+    background: #eff6ff;
+    border-radius: 5px;
+    font-size: 14px;
+}
+body > table:not(:first-of-type) td a:hover {
+    color: #ffffff;
+    background: #2563eb;
+    text-decoration: none;
+}
+/* ---------- Lecture Schedule ---------- */
+/* Date column */
+#schedule {
+    font-size: 21px;
+}
+/* ---------- Lab Schedule ---------- */
+#lab {
+    font-size: 21px;
+}
+/* ---------- Exams ---------- */
+#activity {
+    font-size: 21px;
+}
+
+/* ---------- TBA Styling ---------- */
+td {
+    overflow-wrap: anywhere;
+}
+td:has(> a) {
+    word-break: normal;
+}
+/* ---------- Horizontal Rules ---------- */
+hr {
+    border: 0;
+    border-top: 1px solid #e2e8f0;
+    margin: 22px 0;
+}
+/* ---------- Back to Top Links ---------- */
+a[href="#home"] {
+    color: #64748b;
+    font-size: 13px;
+    font-weight: 600;
+}
+a[href="#home"]:hover {
+    color: #2563eb;
+}
+
+/* ---------- Staff Section ---------- */
+#staff {
+    color: #172554;
+}
+body > table:last-of-type {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 20px;
+    border: 1px solid #e2e8f0;
+}
+body > table:last-of-type td {
+    padding: 12px 20px;
+}
+/* Instructor / TA links */
+body > table:last-of-type a {
+    color: #2563eb;
+}
+/* ---------- Footer ---------- */
+#txt {
+    margin-top: 10px;
+    color: #64748b;
+    font-size: 14px;
+}
+body > table:last-child {
+    margin-bottom: 30px !important;
+}
+body > table:last-child font {
+    color: #64748b;
+}
+/* ---------- Course Links Footer ---------- */
+body > table:last-child a {
+    font-size: 14px;
+}
+/* ---------- Sticky Navigation on Scroll ---------- */
+body > table:first-of-type tr:nth-child(2) {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+/* ---------- Responsive Tables ---------- */
+@media (max-width: 900px) {
+    body {
+        font-size: 16px;
+    }
+    body > table {
+        width: 96% !important;
+    }
+    body > table:first-of-type tr:nth-child(2) a {
+        padding: 10px 7px;
+        font-size: 13px;
+    }
+    body > table:first-of-type tr:nth-child(n+3) td {
+        padding: 22px 18px;
+    }
+    body > table:not(:first-of-type) {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    body > table:not(:first-of-type) td,
+    body > table:not(:first-of-type) th {
+        padding: 10px 8px;
+    }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 600px) {
+    body {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+    body > table {
+        width: 100% !important;
+        margin-bottom: 15px !important;
+    }
+    /* Header */
+    body > table:first-of-type {
+        margin-top: 0 !important;
+    }
+    body > table:first-of-type tr:first-child td {
+        padding: 22px 12px;
+        border-radius: 0;
+    }
+    h1 {
+        font-size: 27px;
+    }
+    h3 {
+        font-size: 16px;
+    }
+    /* Navigation becomes horizontally scrollable */
+    body > table:first-of-type tr:nth-child(2) td {
+        text-align: left;
+        overflow-x: auto;
+        white-space: nowrap;
+        border-radius: 0;
+    }
+    body > table:first-of-type tr:nth-child(2) a {
+        padding: 10px 8px;
+        font-size: 12px;
+    }
+    /* Content */
+    body > table:first-of-type tr:nth-child(n+3) td {
+        padding: 20px 14px;
+    }
+    b[id] {
+        font-size: 19px;
+    }
+    /* Lists */
+    ul {
+        padding-left: 20px;
+    }
+    /* Tables */
+    body > table:not(:first-of-type) {
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        border-radius: 0;
+        font-size: 14px;
+    }
+
+    body > table:not(:first-of-type) tr:first-child td {
+        padding: 14px;
+    }
+    body > table:not(:first-of-type) td,
+    body > table:not(:first-of-type) th {
+        padding: 8px 7px;
+    }
+    /* Footer */
+    body > table:last-child {
+        border-radius: 0;
+    }
+}
+/* ---------- Very Small Devices ---------- */
+
+@media (max-width: 400px) {
+
+    h1 {
+        font-size: 23px;
+    }
+    h3 {
+        font-size: 14px;
+    }
+    body > table:first-of-type tr:nth-child(2) a {
+        font-size: 11px;
+        padding: 8px 6px;
+    }
+    body > table:not(:first-of-type) {
+        font-size: 13px;
+    }
+}
+/* ---------- Accessibility ---------- */
+a:focus {
+    outline: 3px solid rgba(37, 99, 235, 0.3);
+    outline-offset: 2px;
+}
+/* ---------- Selection ---------- */
+::selection {
+    color: #ffffff;
+    background: #2563eb;
+}
