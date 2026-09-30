@@ -30,7 +30,11 @@ body > table:first-of-type {
     margin-top: 25px !important;
 }
 /* ---------- Headings ---------- */
-
+/*----feature.js-----------*/
+.dark {
+    background-color: #222;
+    color: white;
+}
 h1 {
     margin: 10px 0 4px;
     color: #172554;
